@@ -1,0 +1,1 @@
+This folder contains various development/prototyping assets. They have been separated into their own folder as not to be mix up with actual project assets, and keeps things clearer.
