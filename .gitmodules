@@ -1,0 +1,3 @@
+[submodule "Assets/Submodules/utilities-unity"]
+	path = Assets/Submodules/utilities-unity
+	url = https://github.com/progklb/utilities-unity.git
