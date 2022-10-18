@@ -3,21 +3,24 @@
 using UnityEditor;
 using UnityEngine;
 
-public class SnapToGround : MonoBehaviour
+namespace Utilities
 {
-    [MenuItem("Custom/Snap To Ground %g")]
-    public static void Ground()
+    public class SnapToGround : MonoBehaviour
     {
-        foreach(var transform in Selection.transforms)
+        [MenuItem("Custom/Snap To Ground %g")]
+        public static void Ground()
         {
-            var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f);
-            foreach(var hit in hits)
+            foreach (var transform in Selection.transforms)
             {
-                if (hit.collider.gameObject == transform.gameObject)
-                    continue;
+                var hits = Physics.RaycastAll(transform.position + Vector3.up, Vector3.down, 10f);
+                foreach (var hit in hits)
+                {
+                    if (hit.collider.gameObject == transform.gameObject)
+                        continue;
 
-                transform.position = hit.point;
-                break;
+                    transform.position = hit.point;
+                    break;
+                }
             }
         }
     }
