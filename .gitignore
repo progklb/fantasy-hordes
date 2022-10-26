@@ -61,3 +61,10 @@ crashlytics-build.properties
 
 # macOS
 *.DS_Store
+
+# Package: Toon Fantasy Nature.
+# These are demo assets that are huge, and we don't need them in the repo.
+Assets/Toon Fantasy Nature/Scenes
+Assets/Toon Fantasy Nature/Scenes.meta
+Assets/Toon Fantasy Nature/Terrain
+Assets/Toon Fantasy Nature/Terrain.meta
