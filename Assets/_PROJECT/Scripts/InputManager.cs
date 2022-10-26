@@ -20,11 +20,17 @@ namespace FantasyHordes
         #region VARIABLES
         [SerializeField]
         private Camera m_Camera;
-        #endregion
+
+		[Space]
+        [SerializeField]
+        private GameObject m_HitIndicatorPrefab;
+        [SerializeField]
+		private float m_HitIndicatorTimeout;
+		#endregion
 
 
-        #region UNITY EVENTS
-        void Awake()
+		#region UNITY EVENTS
+		void Awake()
         {
             // TODO Replace with log with TAG.
             Debug.Assert(m_Camera != null, "Camera must be assigned.");
@@ -47,19 +53,27 @@ namespace FantasyHordes
         {
             var ray = m_Camera.ScreenPointToRay(Input.mousePosition);
 
-            
-
             if (Physics.Raycast(ray, out RaycastHit hit, 100, 1 << (int)Layers.Ground))
             {
-                Debug.Log("Hit!");
                 Debug.DrawLine(m_Camera.transform.position, hit.point, Color.green, 2f);
                 onClick(Layers.Ground, hit.point, hit.normal);
+
+                if (m_HitIndicatorPrefab != null)
+				{
+                    SpawnIndicator(new Pose(hit.point, Quaternion.Euler(hit.normal)), m_HitIndicatorTimeout);
+				}
             }
             else
             {
                 Debug.DrawRay(m_Camera.transform.position, hit.point, Color.red, 2f);
             }
         }
+
+        void SpawnIndicator(Pose pose, float timeout = 1f)
+		{
+            var indicator = Instantiate(m_HitIndicatorPrefab, pose.position, pose.rotation, transform);
+            Destroy(indicator, timeout);
+		}
         #endregion
     }
 }
