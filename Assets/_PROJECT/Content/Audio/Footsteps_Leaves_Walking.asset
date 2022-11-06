@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918108615bae74ade904fb3d2d1cf5f0, type: 3}
+  m_Name: Footsteps_Leaves_Walking
+  m_EditorClassIdentifier: 
+  m_Key: Footsteps_Leaves_Walking
+  m_Clips:
+  - {fileID: 8300000, guid: d5677d02184ee4547b9af48d1c408aa8, type: 3}
+  - {fileID: 8300000, guid: 6f71b7bbe99379c4aafb5e19c1293c78, type: 3}
+  - {fileID: 8300000, guid: aab58260b82cba4428d20acf6192ba82, type: 3}
+  - {fileID: 8300000, guid: df892e6c6661d304fad546bc20452c99, type: 3}
+  - {fileID: 8300000, guid: 9295476bd2f0d3949a064afd71233768, type: 3}
+  - {fileID: 8300000, guid: 83bfb12cea5222b43b013fa2fddc3ba2, type: 3}
+  - {fileID: 8300000, guid: fc6166d4b1164a540982e6285ac323e5, type: 3}
+  - {fileID: 8300000, guid: 22c59f96f71fe9640b969081cb631d42, type: 3}
+  - {fileID: 8300000, guid: bce3e8594db5b524198603b5e19073ab, type: 3}
+  - {fileID: 8300000, guid: fc7f15f1e8367f245a8d51a9409db87f, type: 3}
+  m_Looping: 0
+  m_PlaybackMode: 0
+  m_Speed: 0.35

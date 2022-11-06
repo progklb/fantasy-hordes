@@ -3896,6 +3896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455556}
   - component: {fileID: 9545102}
+  - component: {fileID: -4131646772713837315}
   m_Layer: 0
   m_Name: Character_Male_Wizard_01
   m_TagString: Untagged
@@ -3951,6 +3952,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4131646772713837315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b8e44751bd14c45a7a5b5f09a3086e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193772
 GameObject:
   m_ObjectHideFlags: 0

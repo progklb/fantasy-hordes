@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918108615bae74ade904fb3d2d1cf5f0, type: 3}
+  m_Name: Footsteps_Grass_Walking
+  m_EditorClassIdentifier: 
+  m_Key: Footsteps_Grass_Walking
+  m_Clips:
+  - {fileID: 8300000, guid: 857e13957d17a074781d84f20553eea0, type: 3}
+  - {fileID: 8300000, guid: 81f63607ae7227a4bb5e2acbbe967145, type: 3}
+  - {fileID: 8300000, guid: 8dba3910bb7e7c942b965a1850ec68f3, type: 3}
+  - {fileID: 8300000, guid: 591a811fc84aee34d894c7e35caeffba, type: 3}
+  - {fileID: 8300000, guid: 65924f75ebafd2e488545a827cda978a, type: 3}
+  - {fileID: 8300000, guid: e362c74cfd324b44d80edf185f68cc50, type: 3}
+  - {fileID: 8300000, guid: 7e68f97217c637b49b01cf20e16bcf4b, type: 3}
+  - {fileID: 8300000, guid: f8fe682e84e6aab4fb32258ef745cebf, type: 3}
+  - {fileID: 8300000, guid: bc231bfca94633d4e995da1f9df359d7, type: 3}
+  - {fileID: 8300000, guid: 25efd9313d29599419553d1b3a86bb06, type: 3}
+  m_Looping: 0
+  m_PlaybackMode: 0
+  m_Speed: 0.35
