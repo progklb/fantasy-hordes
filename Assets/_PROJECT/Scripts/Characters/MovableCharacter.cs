@@ -12,7 +12,7 @@ namespace FantasyHordes.Characters
     /// A <see cref="Character"/> that supports movement.
     /// </summary>
     [RequireComponent(typeof(NavMeshAgent))]
-    public class MovableCharacter : Character, IMovable
+	public class MovableCharacter : Character, IMovable
     {
         #region PROPERTIES
         public NavMeshAgent agent { get; set; }

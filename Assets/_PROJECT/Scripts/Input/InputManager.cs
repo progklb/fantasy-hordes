@@ -1,6 +1,10 @@
 using UnityEngine;
 
-namespace FantasyHordes
+using Utilities;
+
+using UInput = UnityEngine.Input;
+
+namespace FantasyHordes.Input
 {
     /// <summary>
     /// Handles all inputs for the game.
@@ -32,14 +36,13 @@ namespace FantasyHordes
 		#region UNITY EVENTS
 		void Awake()
         {
-            // TODO Replace with log with TAG.
-            Debug.Assert(m_Camera != null, "Camera must be assigned.");
+            Log.Assert(this, m_Camera != null, "Camera must be assigned.");
         }
 
         void Update()
         {
             // TODO Replace with new input system.
-            if (Input.GetMouseButtonDown(0))
+            if (UInput.GetMouseButtonDown(0))
             {
                 ProcessMouseClick();
             }
@@ -51,7 +54,7 @@ namespace FantasyHordes
         // TODO Consider using OnMouseDown
         void ProcessMouseClick()
         {
-            var ray = m_Camera.ScreenPointToRay(Input.mousePosition);
+            var ray = m_Camera.ScreenPointToRay(UInput.mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hit, 100, 1 << (int)Layers.Ground))
             {
