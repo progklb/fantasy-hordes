@@ -22,6 +22,8 @@ namespace FantasyHordes.Characters
         #region PROPERTIES
         public Animator animator { get; private set; }
         public AnimationEventNotifier animationEventNotifier { get; private set; }
+
+        public CharacterAnimationKeys animationKeys { get; private set; } = new CharacterAnimationKeys();
 		#endregion
 
 
@@ -51,21 +53,6 @@ namespace FantasyHordes.Characters
 			animator = model.GetComponent<Animator>();
             animationEventNotifier = model.GetComponent<AnimationEventNotifier>();
             animationEventNotifier.onStringEventReceived += OnAnimationEventReceived;
-		}
-
-        protected virtual void Update()
-		{
-            // TODO Refine this.
-            // Use an enum to represent states, and
-			// migrate this logic into a proper state machine.
-			if (agent.remainingDistance < 0.2f)
-			{
-				animator.SetBool("Running", false);
-			}
-            else
-			{
-				animator.SetBool("Running", true);
-			}
 		}
 
 		protected override void OnDestroy()
