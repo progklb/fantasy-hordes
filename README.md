@@ -37,3 +37,5 @@ Player movement is handled by Unity's navigation mesh system. When the player cl
 ### Audio
 
 For footstep sounds, characters raise an animation event at the correct time in their animation loop. This notifies the `PlayerCharacter` to play their footstep sound. The correct sound is actively assigned/updated in the `AudioControler` based on the surface type that the character is running on - which is handled by `AudioBankTrigger`s in the scene.
+
+> When implementing/change character animations, remember to update the animation events for audio.
