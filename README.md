@@ -26,9 +26,18 @@ The following folder hierarchy convention is to be used for sub-projects within 
 
 ## Systems
 
-### Player movement
+![Image](./Documentation/PlayerRig.png)
+
+### Player
 
 The `Assets/_PROJECT/Content/Characters/Prefabs/Player` prefab is a proxy object that holds generic character components. At runtime, the `PlayerCharacter` component spawns a full character prefab.
+
+There are a number of visible gizmos here, as shown in the screenshot above:
+
+- The outermost gizmo is athe player's audi source.
+- The second-outer most gizmo is the player's navigation mesh agent.
+- The third is the player's trigger collider, used for detecting contact with objects in the world (e.g. intersecting with the mesh the player is standing on/in, in order to determine the footstep audio type. Note that this is offset slightly downward, as to intersect with the floor).
+- The inner-most collider is a rigidbody collider for affecting objects when colliding with them (e.g. pushing a chair out of the way when running into it).
 
 [Mixamo](https://www.mixamo.com/) has been used for charater animations. All animations are contained in the `Assets/Mixamo` folder, and [this](https://www.youtube.com/watch?v=9H0aJhKSlEQ) tutorial was used to set up the character animations with the Synty Studios characters contained in `Assets/PolygonFantasyCharacters/Prefabs`. Note that these animation contain animation events for triggering audio/effects.
 
