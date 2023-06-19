@@ -78,7 +78,7 @@ namespace FantasyHordes.Characters
                     break;
 
                 default:
-                    Log.Error(this, "Unsupported animation event received.");
+                    Log.Error(LogTopics.Player, "Unsupported animation event received.");
                     break;
             }
 		}

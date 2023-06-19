@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
-
 namespace FantasyHordes
 {
 	public enum LogTopics
 	{
+		// Keep these alphabetical!
+
+		Camera,
 		Input,
 		Player
 	}

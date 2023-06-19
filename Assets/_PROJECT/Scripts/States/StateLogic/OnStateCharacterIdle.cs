@@ -51,7 +51,7 @@ namespace FantasyHordes.States.StateLogic
 
 		void PlayIdleAnimation()
 		{
-			Log.Info(this, $"Character idle for {string.Format("{0:F2}", idleTimer.accumulatedTime)}s. Playing random idle animation.");
+			Log.Info(LogTopics.Player, $"Character idle for {string.Format("{0:F2}", idleTimer.accumulatedTime)}s. Playing random idle animation.");
 			m_Player.animator.SetTrigger(m_Player.animationKeys.idles.GetRandomIdle());
 		}
 		#endregion
