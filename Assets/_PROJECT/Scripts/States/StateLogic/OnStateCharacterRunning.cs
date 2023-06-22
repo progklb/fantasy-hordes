@@ -1,8 +1,4 @@
-﻿using UnityEngine;
-
-using Utilities.StateMachine;
-
-using FantasyHordes.Characters;
+﻿using Utilities.StateMachine;
 
 namespace FantasyHordes.States.StateLogic
 {

@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace FantasyHordes.Characters
 {
-    /// <summary>
-    /// Represents a generic character in the game world.
-    /// </summary>
+	/// <summary>
+	/// Represents a generic character in the game world.
+	/// </summary>
 	public class CharacterAnimationKeys
-    {
+	{
 		#region TYPES
 		public class Idles
 		{
@@ -28,7 +28,7 @@ namespace FantasyHordes.Characters
 		#region PROPERTIES
 		public string running { get => "Running"; }
 
-        public Idles idles { get; private set; } = new Idles();
+		public Idles idles { get; private set; } = new Idles();
 		#endregion
 	}
 }

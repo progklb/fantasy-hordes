@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+﻿using FantasyHordes.Characters;
+
+using UnityEngine;
 using UnityEngine.AI;
 
 using Utilities.StateMachine.Conditions;
-
-using FantasyHordes.Characters;
 
 namespace FantasyHordes.States.Conditions
 {

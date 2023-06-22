@@ -1,10 +1,10 @@
 namespace FantasyHordes
 {
-    /// <summary>
-    /// Represents the available layers.
-    /// </summary>
-    public enum Layers
-    {
-        Ground = 10
-    }
+	/// <summary>
+	/// Represents the available layers.
+	/// </summary>
+	public enum Layers
+	{
+		Ground = 10
+	}
 }
