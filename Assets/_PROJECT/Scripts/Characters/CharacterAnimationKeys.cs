@@ -3,7 +3,7 @@ using UnityEngine;
 namespace FantasyHordes.Characters
 {
 	/// <summary>
-	/// Represents a generic character in the game world.
+	/// Represents a set of animation keys for a character.
 	/// </summary>
 	public class CharacterAnimationKeys
 	{

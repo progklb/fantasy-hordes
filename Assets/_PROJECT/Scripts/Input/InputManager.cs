@@ -51,7 +51,6 @@ namespace FantasyHordes.Input
 
 
 		#region HELPER FUNCTIONS
-		// TODO Consider using OnMouseDown
 		void ProcessMouseClick()
 		{
 			var ray = m_Camera.ScreenPointToRay(UInput.mousePosition);

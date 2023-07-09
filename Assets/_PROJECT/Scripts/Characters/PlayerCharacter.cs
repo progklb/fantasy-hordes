@@ -43,7 +43,7 @@ namespace FantasyHordes.Characters
 
 			m_ModelParent.DestroyChildren();
 
-			// Crate player model and get refs to components.
+			// Create player model and get refs to components.
 			var model = Instantiate(m_PlayerPrefab, m_ModelParent);
 			animator = model.GetComponent<Animator>();
 			animationEventNotifier = model.GetComponent<AnimationEventNotifier>();
