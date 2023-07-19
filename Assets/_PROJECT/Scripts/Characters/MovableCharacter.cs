@@ -23,15 +23,28 @@ namespace FantasyHordes.Characters
 
 			agent = GetComponent<NavMeshAgent>();
 		}
+
+		private void OnDrawGizmos()
+		{
+			// Draw the path to the target.
+			if (Application.isPlaying && agent.remainingDistance > 0.1f && agent.path.corners.Length > 1)
+			{
+				for (int i = 0; i < agent.path.corners.Length - 1; i++)
+				{
+					Debug.DrawLine(agent.path.corners[i], agent.path.corners[i + 1], Color.green);
+				}
+			}
+		}
 		#endregion
 
 
 		#region PUBLIC API
 		public bool MoveTo(Vector3 position)
 		{
-			agent.destination = position;
-
-			Debug.DrawLine(transform.position, agent.destination, Color.yellow, 2f);
+			if (Vector3.Distance(agent.nextPosition, position) > 1.1f)
+			{
+				agent.destination = position;
+			}
 
 			return agent.pathStatus != NavMeshPathStatus.PathInvalid;
 		}

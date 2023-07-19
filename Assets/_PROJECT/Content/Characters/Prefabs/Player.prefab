@@ -363,6 +363,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad649f8c70a104aa2adfdb8de528ed61, type: 2}
   m_DefaultAudioBank: {fileID: 11400000, guid: b166ec0924fa44a07901f0f177326a7c, type: 2}
   m_AudioSource: {fileID: 4527728924102797100}
+  m_IsStacking: 1
 --- !u!82 &4527728924102797100
 AudioSource:
   m_ObjectHideFlags: 0
