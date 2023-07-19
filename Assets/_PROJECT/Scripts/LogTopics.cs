@@ -4,6 +4,7 @@ namespace FantasyHordes
 	{
 		// Keep these alphabetical!
 
+		Audio,
 		Camera,
 		Input,
 		Player

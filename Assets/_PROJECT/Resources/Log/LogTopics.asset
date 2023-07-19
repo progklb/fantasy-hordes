@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6bb0e3ac69fd34da1dd76161b082c2, type: 3}
   m_Name: LogTopics
   m_EditorClassIdentifier: 
+  Audio: 0
   Input: 0
   Player: 0
