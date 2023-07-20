@@ -13,6 +13,12 @@ namespace FantasyHordes.Characters
 	{
 		#region PROPERTIES
 		public NavMeshAgent agent { get; set; }
+
+		/// Whether the <see cref="ignoreMoveDistanceThreshold"/> distance is respected.
+		public bool ignoreMoveIfBelowThreshold { get; set; } = true;
+		/// The minimum distance from the character that a move command must be issued, else it is ignored.
+		/// Only respected if <see cref="ignoreMoveIfBelowThreshold"/> is true.
+		public float ignoreMoveDistanceThreshold { get; set; } = 1.1f;
 		#endregion
 
 
@@ -41,7 +47,7 @@ namespace FantasyHordes.Characters
 		#region PUBLIC API
 		public bool MoveTo(Vector3 position)
 		{
-			if (Vector3.Distance(agent.nextPosition, position) > 1.1f)
+			if (Vector3.Distance(agent.nextPosition, position) > (ignoreMoveIfBelowThreshold ? ignoreMoveDistanceThreshold : 0f))
 			{
 				agent.destination = position;
 			}

@@ -85,6 +85,7 @@ namespace FantasyHordes.Characters
 		{
 			if (layer == Layers.Ground)
 			{
+				ignoreMoveIfBelowThreshold = true;
 				MoveTo(pos);
 			}
 		}
