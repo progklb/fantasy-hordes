@@ -1,5 +1,3 @@
-using FantasyHordes.Input;
-
 using UnityEngine;
 
 using Utilities;
@@ -38,9 +36,6 @@ namespace FantasyHordes.Characters
 		{
 			base.Start();
 
-			// Listen for control input.
-			InputManager.onClick += OnClick;
-
 			m_ModelParent.DestroyChildren();
 
 			// Create player model and get refs to components.
@@ -54,7 +49,6 @@ namespace FantasyHordes.Characters
 		{
 			base.OnDestroy();
 
-			InputManager.onClick -= OnClick;
 			animationEventNotifier.onStringEventReceived -= OnAnimationEventReceived;
 		}
 		#endregion
@@ -75,18 +69,6 @@ namespace FantasyHordes.Characters
 				default:
 					Log.Error(LogTopics.Player, "Unsupported animation event received.");
 					break;
-			}
-		}
-		#endregion
-
-
-		#region HELPER FUNCTIONS
-		void OnClick(Layers layer, Vector3 pos, Vector3 norm)
-		{
-			if (layer == Layers.Ground)
-			{
-				ignoreMoveIfBelowThreshold = true;
-				MoveTo(pos);
 			}
 		}
 		#endregion
