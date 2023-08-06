@@ -24,12 +24,12 @@ namespace FantasyHordes.Input
 		#region PUBLIC API
 		public void Set(Texture2D texture)
 		{
-			Cursor.SetCursor(texture, new Vector2(), CursorMode.Auto);
+			Cursor.SetCursor(texture, new Vector2(), CursorMode.ForceSoftware);
 		}
 
 		public void Unset()
 		{
-			Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
+			Cursor.SetCursor(null, new Vector2(), CursorMode.ForceSoftware);
 		}
 		#endregion
 	}
