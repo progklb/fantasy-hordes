@@ -2,6 +2,9 @@
 
 namespace FantasyHordes.States.StateLogic
 {
+	/// <summary>
+	/// A character's running state.
+	/// </summary>
 	public class OnStateCharacterRunning : OnStateCharacterLogic
 	{
 		#region PUBLIC API

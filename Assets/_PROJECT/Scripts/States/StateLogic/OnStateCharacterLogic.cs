@@ -8,6 +8,9 @@ using Utilities.StateMachine.StateLogic;
 
 namespace FantasyHordes.States.StateLogic
 {
+	/// <summary>
+	/// Base class for defining character state logic.
+	/// </summary>
 	public abstract class OnStateCharacterLogic : MonoBehaviour, IStateEvent, IStateLogic
 	{
 		#region PROPERTIES
