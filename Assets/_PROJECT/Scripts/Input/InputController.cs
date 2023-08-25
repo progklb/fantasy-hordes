@@ -24,7 +24,7 @@ namespace FantasyHordes.Input
 
 		void OnDestroy()
 		{
-			InputManager.instance.DeregisterController(this);
+			InputManager.instance?.DeregisterController(this);
 		}
 		#endregion
 

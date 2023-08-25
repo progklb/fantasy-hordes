@@ -9,6 +9,11 @@ namespace FantasyHordes.Input
 	[RequireComponent(typeof(PlayerCharacter))]
 	public class PlayerKeyboardInputController : InputController
 	{
+		#region PROPERTIES
+		public bool DebugShowTargetPosition = true;
+		#endregion
+
+
 		#region VARIABLES
 		[SerializeField]
 		private PlayerCharacter m_Player;
@@ -55,6 +60,11 @@ namespace FantasyHordes.Input
 
 			var targetPos = transform.position + (ParallelToCameraView(z) + NormalToCameraView(x)) * m_LookAheadDistance;
 			m_Player.MoveTo(targetPos);
+
+			if (DebugShowTargetPosition)
+			{
+				InputManager.instance.ShowIndicator(new Pose(targetPos, Quaternion.identity));
+			}
 		}
 
 		/// <summary>
